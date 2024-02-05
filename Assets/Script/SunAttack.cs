@@ -29,7 +29,7 @@ public class SunAttack : MonoBehaviour
             GetComponent<SpriteRenderer>().enabled = isbeam;
             GetComponent<BoxCollider2D>().enabled = true;
 
-            StartCoroutine(DelayCoroutine());
+            //StartCoroutine(DelayCoroutine());
         }
         else
         {
