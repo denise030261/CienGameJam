@@ -231,9 +231,12 @@ MonoBehaviour:
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
   spawnSpeed: 2
-  spawnStartSpeed: 1
+  spawnMinSpeed: 1
+  spawnMaxSpeed: 1
   spawnXMax: 7.5
   spawnXMin: -8
+  spawnYMax: 0
+  spawnYMin: 0
 --- !u!212 &418297700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -448,6 +451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351202aa211c3154092d85b01a23af65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStage: 0
+  Suns: []
 --- !u!212 &464126686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1801,7 +1806,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2568,8 +2573,8 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
-    sphericalDirectionAmount: 0
+    randomDirectionAmount: 1
+    sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
       value: 1
@@ -6587,7 +6592,7 @@ Transform:
   m_GameObject: {fileID: 2045192659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.99, z: 0}
+  m_LocalPosition: {x: 0, y: -0.91, z: 0}
   m_LocalScale: {x: 0.43069997, y: 0.43069997, z: 0.43069997}
   m_ConstrainProportionsScale: 0
   m_Children: []
