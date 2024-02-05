@@ -317,6 +317,22 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1381019148}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[1].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: 45215b8e1d2cf49b3a0ff38fe7687643, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[2].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: 66aace9dcdbb441c4bd81004cbe20098, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[3].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: a7cd1c2f595f947dc8ab21a2c82d3423, type: 3}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -840,6 +856,10 @@ PrefabInstance:
       propertyPath: Sweat
       value: 
       objectReference: {fileID: 2045192661}
+    - target: {fileID: 6586818284420215899, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
+      propertyPath: clothes
+      value: 
+      objectReference: {fileID: 4716461222106466343, guid: 82087d6fac3aa4d3792d85b9a23782cf, type: 3}
     - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

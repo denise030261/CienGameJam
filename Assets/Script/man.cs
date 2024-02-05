@@ -8,6 +8,7 @@ public class man : MonoBehaviour
     public int Hp;
     public ParticleSystem Sweat;
     private bool _wait = false;
+    public SpriteRenderer clothes;
 
     public List<GameObject> ManSprites;
     // Start is called before the first frame update
