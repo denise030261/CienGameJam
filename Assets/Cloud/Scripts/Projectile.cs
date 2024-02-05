@@ -11,7 +11,10 @@ public class Projectile : MonoBehaviour
     private bool noDamage; // 데미지 여부
 
     [SerializeField]
-    private float speed; // 내리는 속도
+    private float speedY; // 내리는 속도
+
+    [SerializeField]
+    private float speedX; // 쓸려가는 속도
 
     [SerializeField]
     private float damageDelay = 0.5f; // 받는 딜레이
@@ -29,11 +32,11 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector2(transform.position.x, transform.position.y - Time.deltaTime * speed);
-    
-        if(currentHP==0)
+
+        transform.position = new Vector2(transform.position.x-speedX*Time.deltaTime, transform.position.y - Time.deltaTime * speedY);
+
+        if (currentHP==0)
         {
-            Debug.Log("파괴");
             Destroy(gameObject);
         }
     }
@@ -52,7 +55,6 @@ public class Projectile : MonoBehaviour
         if (collision.name == "SunBeam" && !noDamage)
         {
             currentHP -= sunDamage;
-            Debug.Log(currentHP);
             noDamage = true;
             Invoke("Damage", damageDelay);
         }
