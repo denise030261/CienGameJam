@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cd51cfe135f04392df9652d520ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRow: 0
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
   - {fileID: 9098553013090233889, guid: 5b589f6bc529f9c49932df7adc9fbae6, type: 3}
@@ -317,6 +318,10 @@ PrefabInstance:
       propertyPath: MaxTime
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -391,11 +396,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464126684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 351202aa211c3154092d85b01a23af65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStage: 0
+  Suns: []
 --- !u!212 &464126686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1581,6 +1588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cd51cfe135f04392df9652d520ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRow: 0
   projectiles:
   - {fileID: 9098553013090233889, guid: b3ca6ba131857104387e232bc5fed95d, type: 3}
   spawnSpeed: 2
