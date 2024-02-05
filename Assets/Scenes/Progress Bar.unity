@@ -392,6 +392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da59d0a7d71641058d886d096cc6ac3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  Time: 0
+  MaxTime: 5
 --- !u!114 &854810471
 MonoBehaviour:
   m_ObjectHideFlags: 0
