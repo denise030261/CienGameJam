@@ -6,6 +6,9 @@ using UnityEngine;
 public class SunAttack : MonoBehaviour
 {
     bool isbeam = false;
+    public float cooldownTime = 2.0f;
+    private bool canUse = true;
+
     void Awake()
     {
         GetComponent<SpriteRenderer>().enabled=false;
@@ -20,11 +23,13 @@ public class SunAttack : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle , Vector3.forward);
         transform.rotation = rotation;
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && canUse)
         {
             isbeam = true;
             GetComponent<SpriteRenderer>().enabled = isbeam;
             GetComponent<BoxCollider2D>().enabled = true;
+
+            StartCoroutine(DelayCoroutine());
         }
         else
         {
@@ -34,12 +39,17 @@ public class SunAttack : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    IEnumerator DelayCoroutine()
     {
-        if(other.name == "wind" && isbeam == true)
-        {
-            other.gameObject.SetActive(false);
-        }
-        
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(ButtonCoolDownCoroutine());
     }
+    IEnumerator ButtonCoolDownCoroutine()
+    {
+        canUse = false;
+        yield return new WaitForSeconds(cooldownTime);
+        canUse = true;
+    }
+
+    
 }
