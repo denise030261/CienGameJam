@@ -50,5 +50,6 @@ MonoBehaviour:
   OnTimeEnded:
     m_PersistentCalls:
       m_Calls: []
+  stages: []
   Time: 0
   MaxTime: 10
