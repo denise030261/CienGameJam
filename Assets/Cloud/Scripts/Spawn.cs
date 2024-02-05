@@ -27,12 +27,6 @@ public class Spawn : MonoBehaviour
     [SerializeField]
     private float spawnXMin; // 스폰 X 최소 반경
 
-    [SerializeField]
-    private float spawnYMax; // 스폰 Y 최대 반경
-
-    [SerializeField]
-    private float spawnYMin; // 스폰 Y 최소 반경
-
     void Start()
     {
         randomSpeed();
@@ -41,26 +35,27 @@ public class Spawn : MonoBehaviour
     void SpawnObject()
     {
         float spawnX = Random.Range(spawnXMin, spawnXMax);
-        float spawnY = Random.Range(spawnYMin, spawnYMax);
 
         Vector2 spawnTransform = new Vector2(this.transform.position.x + spawnX,
-            this.transform.position.y+spawnY);
+            this.transform.position.y);
 
         if (GameManager.Instance.stage >= 1 && !isRow)
         {
             Debug.Log("1레벨 스폰");
             Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
         }
-        else if(GameManager.Instance.stage>=2 && isRow)
+
+        if(GameManager.Instance.stage>=2 && isRow)
         {
             Debug.Log("2레벨 스폰");
-            Instantiate(projectiles[1], spawnTransform, Quaternion.identity);
+            Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
         }
         
-        if (GameManager.Instance.stage == 3 && !isFog)
+        if (GameManager.Instance.stage == 3 && !isFog && !isRow)
         {
             Debug.Log("3레벨 스폰");
-            Instantiate(projectiles[2], spawnTransform, Quaternion.identity);
+            spawnTransform = new Vector2(0, 0);
+            Instantiate(projectiles[1], spawnTransform, Quaternion.identity);
             isFog = true;
         }
         
