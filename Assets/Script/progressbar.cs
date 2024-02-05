@@ -6,16 +6,14 @@ using UnityEngine.UI;
 public class progressbar : MonoBehaviour
 {
     public Slider slider;
-
-
-    public float Time;
-    public float MaxTime = 5;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        
+        gameObject.GetComponent<Slider>().maxValue=GameManager.Instance.MaxTime;
+        gameObject.GetComponent<Slider>().minValue = 0;
     }
-
     // Update is called once per frame
     void Update()
     {
