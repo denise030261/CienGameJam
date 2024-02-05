@@ -12,18 +12,21 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnTimeEnded;
     public int sweat;
     public man man;
+    public Hash128 _currentHash;
+    public GameObject effect;
 
     [Serializable]
     public class Clothes
     {
         public Sprite clothes;
+        public Sprite clothesParts;
         public int health;
     }
     [Serializable]
     public class Stage
     {
         public List<Clothes> clothesList;
-        public int manHp=100;
+        public int manHp = 100;
     };
 
     public List<Stage> stages;
@@ -64,14 +67,25 @@ public class GameManager : MonoBehaviour
         {
             if (clothes.health<=man.Hp)
             {
-                man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
+                if (_currentHash != clothes.clothes.texture.imageContentsHash)
+                {
+                    man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
+                    var tmp=Instantiate(man.clothes.gameObject, null);
+                    tmp.transform.position = man.transform.position+Vector3.up;
+                    tmp.GetComponent<Rigidbody2D>().AddForce(new Vector2(-300,300));
+                    tmp.GetComponent<Rigidbody2D>().AddTorque(20);
+                    tmp.GetComponent<SpriteRenderer>().sprite = clothes.clothesParts;
+                    Instantiate(effect, man.transform).transform.position+=Vector3.up*2;
+                    _currentHash = clothes.clothes.texture.imageContentsHash;
+                }
                 break;
             }
 
-            if (man.Hp <= 0)
-            {
-                NextStage();
-            }
+            
+        }
+        if (man.Hp <= 0)
+        {
+            NextStage();
         }
     }
 
