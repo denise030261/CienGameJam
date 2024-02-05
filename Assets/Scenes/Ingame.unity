@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cd51cfe135f04392df9652d520ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRow: 0
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
   spawnSpeed: 2
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: 0
   Suns: []
+  needSweat: 0
 --- !u!212 &464126686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -830,14 +832,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 195638574116170160, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
-    - target: {fileID: 195638574116170160, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2512661953428116517, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_Name
       value: Man
@@ -846,22 +840,6 @@ PrefabInstance:
       propertyPath: Sweat
       value: 
       objectReference: {fileID: 2045192661}
-    - target: {fileID: 6586818284420215899, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: ManSprites.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_Offset.y
-      value: 3.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.0020686174
-      objectReference: {fileID: 0}
     - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

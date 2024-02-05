@@ -54,13 +54,13 @@ MonoBehaviour:
   man: {fileID: 0}
   stages:
   - clothesList:
-    - clothes: {fileID: 21300000, guid: 8620a05f929b6499f9c29121a9849b6d, type: 3}
+    - clothes: {fileID: 21300000, guid: 64c827300255a41799373ed7d4af1d74, type: 3}
       health: 90
-    - clothes: {fileID: 21300000, guid: 26a9ed282daeb4226ad11e0050875c79, type: 3}
+    - clothes: {fileID: 21300000, guid: 52a37042ec2564c0889ad3dd5bba75ad, type: 3}
       health: 75
-    - clothes: {fileID: 21300000, guid: 46ab2d31183b649e5b9918b2db82fcf7, type: 3}
+    - clothes: {fileID: 21300000, guid: 36cb86fcd573242099cb99e7b9595f25, type: 3}
       health: 50
-    - clothes: {fileID: 21300000, guid: b58a5ccd5066b446aa4c7001206aff93, type: 3}
+    - clothes: {fileID: 21300000, guid: a8f5e0dc7e8d640929a9540f6a291c57, type: 3}
       health: 25
     - clothes: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
       health: 0
