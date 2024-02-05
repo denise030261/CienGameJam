@@ -32,7 +32,6 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-
         transform.position = new Vector2(transform.position.x-speedX*Time.deltaTime, transform.position.y - Time.deltaTime * speedY);
 
         if (currentHP==0)

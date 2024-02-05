@@ -8,6 +8,7 @@ public class Fog : MonoBehaviour
     private float delayTime;
     private bool isFadein;
     private bool isFadeout;
+    private bool isStart; // 안개 발동 여부
 
     [SerializeField]
     private float delayMinTime; // 간격최소시간
@@ -27,7 +28,6 @@ public class Fog : MonoBehaviour
         fogImage = GetComponent<SpriteRenderer>();
         delayTime = Random.Range(delayMinTime, delayMaxTime);
         Init();
-
         StartCoroutine(CloseFog());
     }
 
@@ -62,6 +62,7 @@ public class Fog : MonoBehaviour
         isFadein = false;
         isFadeout = false;
         fogImage.color = new Color(fogImage.color.r, fogImage.color.g, fogImage.color.b, 0f);
+        isStart = false;
     }
 
     IEnumerator OpenFog()

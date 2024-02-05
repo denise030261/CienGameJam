@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    private bool isFog=false;
+
+    [SerializeField]
+    private bool isRow = false;
+
     [SerializeField]
     private GameObject[] projectiles; // 발사체
 
@@ -41,8 +46,24 @@ public class Spawn : MonoBehaviour
         Vector2 spawnTransform = new Vector2(this.transform.position.x + spawnX,
             this.transform.position.y+spawnY);
 
-        int num = Random.Range(0, projectiles.Length);
-        Instantiate(projectiles[num],spawnTransform, Quaternion.identity);
+        if (GameManager.Instance.stage >= 1 && !isRow)
+        {
+            Debug.Log("1레벨 스폰");
+            Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
+        }
+        else if(GameManager.Instance.stage>=2 && isRow)
+        {
+            Debug.Log("2레벨 스폰");
+            Instantiate(projectiles[1], spawnTransform, Quaternion.identity);
+        }
+        
+        if (GameManager.Instance.stage == 3 && !isFog)
+        {
+            Debug.Log("3레벨 스폰");
+            Instantiate(projectiles[2], spawnTransform, Quaternion.identity);
+            isFog = true;
+        }
+        
 
         randomSpeed();
     }
