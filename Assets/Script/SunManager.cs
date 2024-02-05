@@ -11,13 +11,12 @@ public class SunManager : MonoBehaviour
     {
         temperature = 0;
         maxTemp = 100;
-        SunAttack sun = new SunAttack();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             temperature++;
         }
