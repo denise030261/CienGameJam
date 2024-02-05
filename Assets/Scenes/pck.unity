@@ -215,26 +215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1140118415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2512661953428116517, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-  m_PrefabInstance: {fileID: 6789395378402371908}
-  m_PrefabAsset: {fileID: 0}
---- !u!111 &1140118420
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140118415}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1001 &3947634075360784936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,18 +285,6 @@ PrefabInstance:
       value: Man
       objectReference: {fileID: 0}
     - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4307
-      objectReference: {fileID: 0}
-    - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4307
-      objectReference: {fileID: 0}
-    - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.4307
-      objectReference: {fileID: 0}
-    - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -359,10 +327,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2512661953428116517, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1140118420}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
 --- !u!1001 &8825021333691445718
 PrefabInstance:
