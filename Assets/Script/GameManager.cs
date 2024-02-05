@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public List<Stage> stages;
     public static GameManager Instance;
-    public int stage;
+    public int stage=0;
 
     public float Time;
 
@@ -47,14 +47,30 @@ public class GameManager : MonoBehaviour
         OnGameStart.Invoke();
     }
 
+    private void Start()
+    {
+        NextStage();
+    }
+
+    private void NextStage()
+    {
+        stage++;
+        man.Hp = stages[stage - 1].manHp;
+    }
+
     private void Update()
     {
-        foreach (var clothes in stages[0].clothesList)
+        foreach (var clothes in stages[stage-1].clothesList)
         {
             if (clothes.health<=man.Hp)
             {
                 man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
                 break;
+            }
+
+            if (man.Hp <= 0)
+            {
+                NextStage();
             }
         }
     }

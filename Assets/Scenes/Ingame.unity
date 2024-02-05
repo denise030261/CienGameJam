@@ -231,9 +231,12 @@ MonoBehaviour:
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
   spawnSpeed: 2
-  spawnStartSpeed: 1
+  spawnMinSpeed: 1
+  spawnMaxSpeed: 1
   spawnXMax: 7.5
   spawnXMin: -8
+  spawnYMax: 0
+  spawnYMin: 0
 --- !u!212 &418297700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -313,62 +316,6 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1381019148}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: MaxTime
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].manSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[0].health
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[1].health
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[2].health
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[3].health
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[4].health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[0].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 8620a05f929b6499f9c29121a9849b6d, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[1].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 26a9ed282daeb4226ad11e0050875c79, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[2].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 46ab2d31183b649e5b9918b2db82fcf7, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[3].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: b58a5ccd5066b446aa4c7001206aff93, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[4].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -448,6 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351202aa211c3154092d85b01a23af65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentStage: 0
+  Suns: []
 --- !u!212 &464126686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1801,7 +1750,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2568,8 +2517,8 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
-    sphericalDirectionAmount: 0
+    randomDirectionAmount: 1
+    sphericalDirectionAmount: 1
     randomPositionAmount: 0
     radius:
       value: 1
@@ -2691,7 +2640,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6587,7 +6536,7 @@ Transform:
   m_GameObject: {fileID: 2045192659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.99, z: 0}
+  m_LocalPosition: {x: 0, y: -0.91, z: 0}
   m_LocalScale: {x: 0.43069997, y: 0.43069997, z: 0.43069997}
   m_ConstrainProportionsScale: 0
   m_Children: []
