@@ -19,8 +19,6 @@ public class SunManager : MonoBehaviour
     {
         // °ÔÀÓ ½ÃÀÛ ºö
         ChangeBeamOnStage();
-
-        
     }
 
     private void Update()
@@ -64,7 +62,7 @@ public class SunManager : MonoBehaviour
         if (sweat >= needSweat)
         {
             buttons[currentStage].interactable = false;
-            sweat = sweat - needSweat;
+            GameManager.Instance.sweat = sweat - needSweat;
             currentStage = currentStage + 1;
             
             if (currentStage < 3)
