@@ -1360,8 +1360,8 @@ RectTransform:
   m_Children:
   - {fileID: 319554790}
   - {fileID: 1151949482}
-  - {fileID: 1815836954}
   - {fileID: 898939303}
+  - {fileID: 1815836954}
   - {fileID: 665941868}
   - {fileID: 280121943}
   m_Father: {fileID: 1066462912}
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 665941870}
   - component: {fileID: 665941869}
   m_Layer: 5
-  m_Name: Button4
+  m_Name: Button5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6734,7 +6734,12 @@ MonoBehaviour:
   - {fileID: 319554791}
   - {fileID: 1151949483}
   - {fileID: 898939304}
+  - {fileID: 1815836955}
+  - {fileID: 665941869}
   needSweat: 20
+  powerUp: 0
+  myParticleSystem: {fileID: 777084428}
+  newRateOverTime: 10
 --- !u!212 &851561796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8486,7 +8491,7 @@ GameObject:
   - component: {fileID: 1815836956}
   - component: {fileID: 1815836955}
   m_Layer: 5
-  m_Name: Button2 (1)
+  m_Name: Button4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

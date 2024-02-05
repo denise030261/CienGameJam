@@ -11,6 +11,9 @@ public class Projectile : MonoBehaviour
     private bool noDamage; // 데미지 여부
 
     [SerializeField]
+    private SunManager sun; // 내리는 속도
+
+    [SerializeField]
     private float speedY; // 내리는 속도
 
     [SerializeField]
@@ -39,9 +42,14 @@ public class Projectile : MonoBehaviour
     {
         transform.position = new Vector2(transform.position.x-speedX*Time.deltaTime, transform.position.y - Time.deltaTime * speedY);
 
-        if (currentHP==0)
+        if (currentHP<=0)
         {
             Destroy(gameObject);
+        }
+
+        if(sun.powerUp)
+        {
+            sunDamage = 3;
         }
     }
 
@@ -58,6 +66,10 @@ public class Projectile : MonoBehaviour
     {
         if (collision.name == "SunBeam" && !noDamage)
         {
+            if(sun.powerUp)
+            {
+                sunDamage = 3;
+            }
             currentHP -= sunDamage;
             noDamage = true;
             Invoke("Damage", damageDelay);
@@ -74,6 +86,11 @@ public class Projectile : MonoBehaviour
         currentHP = maxHP;
         noDamage = false;
         Man = GameObject.Find("Man").GetComponent<man>();
+        sun = GameObject.Find("Sun").GetComponent<SunManager>();
+        if(!sun)
+        {
+            Debug.Log("찾을 수 없습니다");
+        }
     }
 
 
