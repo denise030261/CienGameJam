@@ -6,6 +6,7 @@ using UnityEngine;
 public class man : MonoBehaviour
 {
     public int Hp;
+    public ParticleSystem Sweat;
 
     public List<GameObject> ManSprites;
     // Start is called before the first frame update
@@ -35,5 +36,17 @@ public class man : MonoBehaviour
             ManSprites[4].SetActive(false);
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.transform.name=="SunBeam")
+            Sweat.Play();
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.transform.name=="SunBeam")
+            Sweat.Stop();
     }
 }

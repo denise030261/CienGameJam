@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
@@ -9,6 +10,16 @@ public class GameManager : MonoBehaviour
 {
     public UnityEvent OnGameStart;
     public UnityEvent OnTimeEnded;
+    public int sweat;
+    
+    [Serializable]
+    public class Stage
+    {
+        public List<GameObject> manSprites;
+        public int manHp=100;
+    };
+
+    public List<Stage> stages;
     public static GameManager Instance;
 
     public float Time;
@@ -41,8 +52,8 @@ public class GameManager : MonoBehaviour
             Time += 1;
             if (Time >= MaxTime)
             {
-                OnTimeEnded.Invoke();
-                break;
+                //OnTimeEnded.Invoke();
+                //break;
             }
         }
     }

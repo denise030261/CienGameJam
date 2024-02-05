@@ -9,7 +9,7 @@ public class SunAttack : MonoBehaviour
     public float cooldownTime = 2.0f;
     private bool canUse = true;
 
-    void Awake()
+    void Start()
     {
         GetComponent<SpriteRenderer>().enabled=false;
         GetComponent<BoxCollider2D>().enabled = false;
