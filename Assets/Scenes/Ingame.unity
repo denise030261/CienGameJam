@@ -316,62 +316,6 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1381019148}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: MaxTime
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].manSprites.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[0].health
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[1].health
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[2].health
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[3].health
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[4].health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[0].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 8620a05f929b6499f9c29121a9849b6d, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[1].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 26a9ed282daeb4226ad11e0050875c79, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[2].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: 46ab2d31183b649e5b9918b2db82fcf7, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[3].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: b58a5ccd5066b446aa4c7001206aff93, type: 3}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: stages.Array.data[0].clothesList.Array.data[4].clothes
-      value: 
-      objectReference: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -2696,7 +2640,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
