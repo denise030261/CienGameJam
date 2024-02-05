@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cd51cfe135f04392df9652d520ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRow: 0
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
   spawnSpeed: 2
@@ -316,6 +317,22 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1381019148}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: effect
+      value: 
+      objectReference: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[1].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: 45215b8e1d2cf49b3a0ff38fe7687643, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[2].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: 66aace9dcdbb441c4bd81004cbe20098, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[0].clothesList.Array.data[3].clothesParts
+      value: 
+      objectReference: {fileID: 21300000, guid: a7cd1c2f595f947dc8ab21a2c82d3423, type: 3}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -397,6 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: 0
   Suns: []
+  needSweat: 0
 --- !u!212 &464126686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -830,14 +848,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 195638574116170160, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
-    - target: {fileID: 195638574116170160, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2512661953428116517, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_Name
       value: Man
@@ -847,21 +857,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2045192661}
     - target: {fileID: 6586818284420215899, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: ManSprites.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_Offset.y
-      value: 3.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 8108185552891718404, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.0020686174
-      objectReference: {fileID: 0}
+      propertyPath: clothes
+      value: 
+      objectReference: {fileID: 4716461222106466343, guid: 82087d6fac3aa4d3792d85b9a23782cf, type: 3}
     - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
