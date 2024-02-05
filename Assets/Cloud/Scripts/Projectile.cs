@@ -28,6 +28,11 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         Init();
+
+        if(transform.position.x<0)
+        {
+            speedX *= -1;
+        }
     }
 
     void Update()

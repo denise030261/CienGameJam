@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class SunManager : MonoBehaviour
 {
     [SerializeField]
     int currentStage;
     public List<GameObject> Suns;
+    public List<Button> buttons;
     GameManager manager;
     public int needSweat;
 
@@ -21,8 +24,6 @@ public class SunManager : MonoBehaviour
     private void Update()
     {
         ChangeBeamOnStage();
-
-        
     }
 
     void ChangeBeamOnStage()
@@ -57,13 +58,19 @@ public class SunManager : MonoBehaviour
 
     public void BeamUpgrade()
     {
-        int sweat = manager.sweat;
+        int sweat = GameManager.Instance.sweat;
         if (sweat >= needSweat)
         {
-            sweat = sweat - needSweat;
+            buttons[currentStage].interactable = false;
+            GameManager.Instance.sweat = sweat - needSweat;
             currentStage = currentStage + 1;
+            
+            if (currentStage < 3)
+            {
+                buttons[currentStage].interactable = true;
+            }
         }
-    }
 
+    }
 
 }
