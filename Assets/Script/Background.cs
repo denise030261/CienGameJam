@@ -25,7 +25,7 @@ public class Background : MonoBehaviour
             start = false;
             _next=Instantiate(gameObject, Backgrounds.transform).GetComponent<Background>();
             start = true;
-            _next.transform.position=Vector2.right*SpriteRenderer.bounds.size.x;
+            _next.transform.position=transform.position+Vector3.right*SpriteRenderer.bounds.size.x;
         }
 
         if (Camera.transform.position.x-transform.position.x>=SpriteRenderer.bounds.size.x)
