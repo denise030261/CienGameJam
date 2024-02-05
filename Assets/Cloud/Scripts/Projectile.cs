@@ -5,33 +5,73 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float temperature;
+    public int maxHP=4;
+    public int currentHP;
 
     [SerializeField]
     private float speed;
 
-    private GameObject playerObject;
+    [SerializeField]
+    private float damageDelay = 0.5f;
 
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private int sunDamage = 1; // 이만큼 데미지 받음
+
+    [SerializeField]
+    private int attackDamage = 1; // 나그네에게 온도를 내림
+
+    private void Awake()
     {
-        playerObject = GameObject.FindGameObjectWithTag("Player");
+        Init();
     }
 
     void Update()
     {
-        Vector2 playerTransform = playerObject.transform.position;
-
-        if (playerObject != null)
+        transform.position = new Vector2(transform.position.x, transform.position.y - Time.deltaTime * speed);
+    
+        if(currentHP==0)
         {
-            transform.position = Vector3.Slerp(transform.position, playerTransform, speed * Time.deltaTime);
-        } // Player 이동
+            Debug.Log("파괴");
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Ground")
         {
+            // 나그네의 온도를 깎는 코드
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.name=="SunBeam")
+        {
+            Debug.Log("데미지를 주겠습니다");
+            InvokeRepeating("Damage", damageDelay, damageDelay);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.name == "SunBeam")
+        {
+            Debug.Log("데미지를 취소");
+            CancelInvoke("Damage");
+        }
+    }
+
+    void Damage()
+    {
+        currentHP -= sunDamage;
+    }
+
+    void Init()
+    {
+        currentHP = maxHP;
+    }
+
+
 }
