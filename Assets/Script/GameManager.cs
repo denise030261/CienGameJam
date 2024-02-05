@@ -11,16 +11,24 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGameStart;
     public UnityEvent OnTimeEnded;
     public int sweat;
-    
+    public man man;
+
+    [Serializable]
+    public class Clothes
+    {
+        public Sprite clothes;
+        public int health;
+    }
     [Serializable]
     public class Stage
     {
-        public List<GameObject> manSprites;
+        public List<Clothes> clothesList;
         public int manHp=100;
     };
 
     public List<Stage> stages;
     public static GameManager Instance;
+    public int stage;
 
     public float Time;
 
@@ -39,6 +47,18 @@ public class GameManager : MonoBehaviour
         OnGameStart.Invoke();
     }
 
+    private void Update()
+    {
+        foreach (var clothes in stages[0].clothesList)
+        {
+            if (clothes.health<=man.Hp)
+            {
+                man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
+                break;
+            }
+        }
+    }
+
     public void StartGame()
     {
         StartCoroutine(Timer());
@@ -52,8 +72,6 @@ public class GameManager : MonoBehaviour
             Time += 1;
             if (Time >= MaxTime)
             {
-                //OnTimeEnded.Invoke();
-                //break;
             }
         }
     }

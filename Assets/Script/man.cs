@@ -13,28 +13,6 @@ public class man : MonoBehaviour
 
     private void Update()
     {
-        if (Hp > 90)
-        {
-            
-        }
-        else if (Hp > 75)
-        {
-            ManSprites[0].SetActive(false);
-
-        }else if (Hp > 50)
-        {
-            ManSprites[1].SetActive(false);
-        }else if (Hp > 25)
-        {
-            ManSprites[2].SetActive(false);
-        }else if (Hp > 0)
-        {
-            ManSprites[3].SetActive(false);
-        }
-        else
-        {
-            ManSprites[4].SetActive(false);
-        }
         
     }
 

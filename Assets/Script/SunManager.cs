@@ -4,22 +4,48 @@ using UnityEngine;
 
 public class SunManager : MonoBehaviour
 {
-    private man Man;
+    [SerializeField]
+    int currentStage;
+    public List<GameObject> Suns;
 
-    private void Start()
+    void Start()
     {
-        Man = GameObject.Find("Man").GetComponent<man>();
-
+        // 게임 시작 빔
+        ChangeBeamOnStage();
     }
 
-   
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Man.Hp-=5;
-        }
+        ChangeBeamOnStage();
+    }
 
+    void ChangeBeamOnStage()
+    {
+        // 각 스테이지에 따라 빔 변경
+        switch (currentStage)
+        {
+            case 0:
+                ChangeBeam(currentStage);
+                break;
+            case 1:
+                Suns[currentStage-1].SetActive(false);
+                ChangeBeam(currentStage);
+                break;
+            case 2:
+                Suns[currentStage - 1].SetActive(false);
+                ChangeBeam(currentStage);
+                break;
+            case 3:
+                Suns[currentStage - 1].SetActive(false);
+                ChangeBeam(currentStage);
+                break;
+            default: 
+                break;
+        }
+    }
+
+    void ChangeBeam(int stageLevel)
+    {
+        Suns[stageLevel].SetActive(true);
     }
 }
