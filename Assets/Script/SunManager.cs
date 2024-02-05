@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class SunManager : MonoBehaviour
 {
-    public int temperature;
-    public int maxTemp;
+    private man Man;
 
-    private void Awake()
+    private void Start()
     {
-        temperature = 0;
-        maxTemp = 100;
+        Man = GameObject.Find("Man").GetComponent<man>();
+
     }
 
+   
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            temperature++;
+            Man.Hp-=5;
         }
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            
-        }
     }
 }

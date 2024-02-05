@@ -542,9 +542,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2060155763571780169, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2512661953428116517, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_Name
       value: Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599793051380439929, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7506493810732433121, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8221806412382833385, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9088536530793324891, guid: f69982a29b9404272b00cebbf8ce443c, type: 3}
       propertyPath: m_LocalPosition.x
