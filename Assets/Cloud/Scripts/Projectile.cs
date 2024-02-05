@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float temperature;
     public int maxHP=4;
     public int currentHP;
 
-    [SerializeField]
-    private float speed;
+    private man Man; // 나그네
+    private bool noDamage; // 데미지 여부
 
     [SerializeField]
-    private float damageDelay = 0.5f;
+    private float speed; // 내리는 속도
+
+    [SerializeField]
+    private float damageDelay = 0.5f; // 받는 딜레이
 
     [SerializeField]
     private int sunDamage = 1; // 이만큼 데미지 받음
 
     [SerializeField]
-    private int attackDamage = 1; // 나그네에게 온도를 내림
+    private int temperature = 1; // 나그네에게 온도를 내림
 
-    private void Awake()
+    private void Start()
     {
         Init();
     }
@@ -40,37 +42,32 @@ public class Projectile : MonoBehaviour
     {
         if (collision.tag == "Ground")
         {
-            // 나그네의 온도를 깎는 코드
+            Man.Hp -= temperature;
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.name=="SunBeam")
+        if (collision.name == "SunBeam" && !noDamage)
         {
-            Debug.Log("데미지를 주겠습니다");
-            InvokeRepeating("Damage", damageDelay, damageDelay);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.name == "SunBeam")
-        {
-            Debug.Log("데미지를 취소");
-            CancelInvoke("Damage");
+            currentHP -= sunDamage;
+            Debug.Log(currentHP);
+            noDamage = true;
+            Invoke("Damage", damageDelay);
         }
     }
 
     void Damage()
     {
-        currentHP -= sunDamage;
+        noDamage = false;
     }
 
     void Init()
     {
         currentHP = maxHP;
+        noDamage = false;
+        Man = GameObject.Find("Man").GetComponent<man>();
     }
 
 
