@@ -272,6 +272,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.80319375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
       value: 100
@@ -1469,6 +1485,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SunBeam
       objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2304776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
       value: 100
@@ -1568,16 +1600,20 @@ PrefabInstance:
       value: SunBeam
       objectReference: {fileID: 0}
     - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Color.b
-      value: 0.10610718
+      value: 0.19343935
       objectReference: {fileID: 0}
     - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Color.g
-      value: 0.10610718
+      value: 0.10588236
       objectReference: {fileID: 0}
     - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Color.r
-      value: 0.91194963
+      value: 0.9137255
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1640,6 +1676,22 @@ PrefabInstance:
     - target: {fileID: 553546391112197133, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Name
       value: SunBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2304776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
@@ -2076,6 +2128,22 @@ PrefabInstance:
     - target: {fileID: 553546391112197133, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Name
       value: SunBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2304776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
@@ -2903,6 +2971,22 @@ PrefabInstance:
     - target: {fileID: 553546391112197133, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Name
       value: SunBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.5815592
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
@@ -13357,6 +13441,22 @@ PrefabInstance:
     - target: {fileID: 553546391112197133, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Name
       value: SunBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2304776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalScale.x
