@@ -50,9 +50,6 @@ MonoBehaviour:
   OnGameEnded:
     m_PersistentCalls:
       m_Calls: []
-  OnTimeEnded:
-    m_PersistentCalls:
-      m_Calls: []
   sweat: 0
   man: {fileID: 0}
   _currentHash:
@@ -123,5 +120,6 @@ MonoBehaviour:
       health: 50
     manHp: 100
   stage: 0
+  EmissionRate: 5
   Time: 0
   MaxTime: 100

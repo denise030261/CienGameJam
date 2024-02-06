@@ -9393,10 +9393,6 @@ PrefabInstance:
       propertyPath: man
       value: 
       objectReference: {fileID: 1995589407}
-    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
-      propertyPath: EmissionRate
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
