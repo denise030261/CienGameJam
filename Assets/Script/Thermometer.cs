@@ -12,7 +12,8 @@ public class Thermometer : MonoBehaviour
     }
     public void Update()
     {
-        slider.value = man.Hp;
+        slider.maxValue = man.MaxHp;
+        slider.value = man.MaxHp-man.Hp;
     }
 
     
