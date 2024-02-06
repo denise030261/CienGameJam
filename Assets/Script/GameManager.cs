@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 {
     public UnityEvent OnGameStart;
     public UnityEvent OnGameEnded;
-    public UnityEvent OnTimeEnded;
     public int sweat;
     public man man;
     public Hash128 _currentHash;
@@ -33,6 +32,7 @@ public class GameManager : MonoBehaviour
     public List<Stage> stages;
     public static GameManager Instance;
     public int stage=0;
+    public float EmissionRate;
 
     public float Time;
 
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         OnGameStart.AddListener(StartGame);
+        OnGameEnded.AddListener(EndGame);
         
         OnGameStart.Invoke();
     }
@@ -59,6 +60,8 @@ public class GameManager : MonoBehaviour
 
     private void ManDamaged(int hp)
     {
+        var tmp1 = man.Sweat.emission;
+        tmp1.rateOverTime=EmissionRate*(man.MaxHp-man.Hp)/man.MaxHp;
         foreach (var clothes in stages[stage-1].clothesList)
         {
             if (clothes.health<=man.Hp)
@@ -128,18 +131,11 @@ public class GameManager : MonoBehaviour
 */
     public void StartGame()
     {
-        StartCoroutine(Timer());
+        
     }
 
-    private IEnumerator Timer()
+    public void EndGame()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(1f);
-            Time += 1;
-            if (Time >= MaxTime)
-            {
-            }
-        }
+        
     }
 }
