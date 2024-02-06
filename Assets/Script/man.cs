@@ -13,9 +13,10 @@ public class man : MonoBehaviour
         get=>_hp;
         set
         {
-            if(_hp!=value)
-                OnManDamaged.Invoke(_hp-value);
+            var tmp = _hp;
             _hp = value;
+            if(tmp!=value)
+                OnManDamaged.Invoke(tmp-value);
         }
     }
 

@@ -59,7 +59,36 @@ public class GameManager : MonoBehaviour
 
     private void ManDamaged(int hp)
     {
-        
+        foreach (var clothes in stages[stage-1].clothesList)
+        {
+            if (clothes.health<=man.Hp)
+            {
+                if (_currentHash != clothes.clothes.texture.imageContentsHash)
+                {
+                    man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
+                    
+                    _currentHash = clothes.clothes.texture.imageContentsHash;
+                    
+                    Instantiate(effect, man.transform).transform.position+=Vector3.up*2;
+                    if (hp > 0)
+                    {
+                        var tmp=Instantiate(man.clothes.gameObject, null);
+                        tmp.transform.position = man.transform.position+Vector3.up;
+                        tmp.GetComponent<Rigidbody2D>().AddForce(new Vector2(-300,300));
+                        tmp.GetComponent<Rigidbody2D>().AddTorque(20);
+                        tmp.GetComponent<SpriteRenderer>().sprite = clothes.clothesParts;
+                        
+                    }
+                }
+                break;
+            }
+
+            
+        }
+        if (man.Hp <= 0)
+        {
+            NextStage();
+        }
     }
 
     private void NextStage()
@@ -67,7 +96,7 @@ public class GameManager : MonoBehaviour
         stage++;
         man.Hp = stages[stage - 1].manHp;
     }
-
+/*
     private void Update()
     {
         foreach (var clothes in stages[stage-1].clothesList)
@@ -95,7 +124,7 @@ public class GameManager : MonoBehaviour
             NextStage();
         }
     }
-
+*/
     public void StartGame()
     {
         StartCoroutine(Timer());
