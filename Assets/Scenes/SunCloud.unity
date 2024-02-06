@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351202aa211c3154092d85b01a23af65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStage: 0
+  BeamLevel: 0
   Suns:
   - {fileID: 1421036777}
   - {fileID: 66674143}
@@ -541,6 +541,8 @@ MonoBehaviour:
   - {fileID: 833941401}
   - {fileID: 25979051}
   - {fileID: 1233226648}
+  powerButton: {fileID: 0}
+  dropButton: {fileID: 0}
   needSweat: 400
   powerUp: 0
   myParticleSystem: {fileID: 1273597801}
