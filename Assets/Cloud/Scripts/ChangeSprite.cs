@@ -19,7 +19,7 @@ public class ChangeSprite : MonoBehaviour
     void Start()
     {
         projectile = GetComponent<Projectile>();
-        proSprite = GetComponent<SpriteRenderer>();
+        proSprite=GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
