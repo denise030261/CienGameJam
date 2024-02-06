@@ -5,6 +5,8 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     private bool isFog=false;
+    private bool isDown = false;
+    private bool isChange = false;
 
     [SerializeField]
     private bool isRow = false;
@@ -22,6 +24,9 @@ public class Spawn : MonoBehaviour
     private float spawnMaxSpeed = 1f; // 스폰 반복 속도
 
     [SerializeField]
+    private float spawnSpeedDown = 1f; // 얼마나 속도를 내릴지
+
+    [SerializeField]
     private float spawnXMax; // 스폰 X 최대 반경
 
     [SerializeField]
@@ -32,6 +37,19 @@ public class Spawn : MonoBehaviour
         randomSpeed();
     }
 
+    private void Update()
+    {
+        if(GameManager.Instance.stage==4 && !isDown)
+        {
+            isDown = true;
+        }
+
+        if(isDown && !isChange)
+        {
+            isChange = true;
+            spawnMaxSpeed -= spawnSpeedDown;
+        }
+    }
     void SpawnObject()
     {
         float spawnX = Random.Range(spawnXMin, spawnXMax);
