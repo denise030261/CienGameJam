@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class GameManager : MonoBehaviour
 {
     public UnityEvent OnGameStart;
+    public UnityEvent OnGameEnded;
     public UnityEvent OnTimeEnded;
     public int sweat;
     public man man;
@@ -52,7 +53,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        man.OnManDamaged.AddListener(ManDamaged);
         NextStage();
+    }
+
+    private void ManDamaged(int hp)
+    {
+        
     }
 
     private void NextStage()

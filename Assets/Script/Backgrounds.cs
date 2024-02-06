@@ -8,10 +8,13 @@ public class Backgrounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.OnTimeEnded.AddListener(()=>
+        GameManager.Instance.OnGameEnded.AddListener(()=>
         {
             _move = false;
         });
+        
+        GameManager.Instance.OnGameStart.AddListener((() => _move=true));
+        
     }
 
     // Update is called once per frame

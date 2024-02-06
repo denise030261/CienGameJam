@@ -2,10 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class man : MonoBehaviour
 {
-    public int Hp;
+    public UnityEvent<int> OnManDamaged;
+    private int _hp;
+    public int Hp
+    {
+        get=>_hp;
+        set
+        {
+            if(_hp!=value)
+                OnManDamaged.Invoke(_hp-value);
+            _hp = value;
+        }
+    }
+
     public ParticleSystem Sweat;
     private bool _wait = false;
     public SpriteRenderer clothes;
@@ -13,9 +26,14 @@ public class man : MonoBehaviour
     public List<GameObject> ManSprites;
     // Start is called before the first frame update
 
-    private void Update()
+    private void Awake()
     {
-        
+        OnManDamaged.AddListener(ManDamaged);
+    }
+
+    private void ManDamaged(int hp)
+    {
+        Debug.Log(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
