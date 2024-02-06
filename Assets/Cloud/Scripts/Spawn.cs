@@ -39,13 +39,19 @@ public class Spawn : MonoBehaviour
         Vector2 spawnTransform = new Vector2(this.transform.position.x + spawnX,
             this.transform.position.y);
 
-        if (GameManager.Instance.stage >= 1 && !isRow)
+       if (GameManager.Instance.stage >= 4 && !isRow)
+        {
+            Debug.Log("4레벨 스폰");
+            int num = Random.Range(0, 2);
+            Instantiate(projectiles[num], spawnTransform, Quaternion.identity);
+        }
+        else if (GameManager.Instance.stage >= 1 && !isRow)
         {
             Debug.Log("1레벨 스폰");
             Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
         }
 
-        if(GameManager.Instance.stage>=2 && isRow)
+        if (GameManager.Instance.stage>=2 && isRow)
         {
             Debug.Log("2레벨 스폰");
             Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
@@ -55,7 +61,7 @@ public class Spawn : MonoBehaviour
         {
             Debug.Log("3레벨 스폰");
             spawnTransform = new Vector2(0, 0);
-            Instantiate(projectiles[1], spawnTransform, Quaternion.identity);
+            Instantiate(projectiles[2], spawnTransform, Quaternion.identity);
             isFog = true;
         }
         
