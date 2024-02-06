@@ -24,7 +24,7 @@ public class SunManager : MonoBehaviour
     void Start()
     {
         powerUp = false;
-        // °ÔÀÓ ½ÃÀÛ ºö
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         ChangeBeamOnStage();
     }
 
@@ -35,7 +35,7 @@ public class SunManager : MonoBehaviour
 
     void ChangeBeamOnStage()
     {
-        // °¢ ½ºÅ×ÀÌÁö¿¡ µû¶ó ºö º¯°æ
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         switch (BeamLevel)
         {
             case 0:
@@ -85,13 +85,14 @@ public class SunManager : MonoBehaviour
         {
             dropButton.interactable = false;
             GameManager.Instance.sweat = sweat - needSweat;
+            GameManager.Instance.EmissionRate = newRateOverTime;
 
-            // ÆÄÆ¼Å¬ ½Ã½ºÅÛÀÇ Emission ¸ðµâ¿¡ Á¢±Ù
-            var emissionModule = myParticleSystem.emission;
+            // ï¿½ï¿½Æ¼Å¬ ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½ Emission ï¿½ï¿½â¿¡ ï¿½ï¿½ï¿½ï¿½
+            //var emissionModule = myParticleSystem.emission;
 
-            // rate over time °ªÀ» º¯°æ
-            emissionModule.rateOverTime = newRateOverTime;
-            Debug.Log("°ª º¯°æ µÆ³ª?");
+            // rate over time ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            //emissionModule.rateOverTime = newRateOverTime;
+            Debug.Log("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ³ï¿½?");
         }
     }
 
@@ -104,7 +105,7 @@ public class SunManager : MonoBehaviour
             GameManager.Instance.sweat = sweat - needSweat;
 
             powerUp = true;
-            Debug.Log("°ª º¯°æ µÆ³ª?");
+            Debug.Log("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ³ï¿½?");
         }
     }
 }
