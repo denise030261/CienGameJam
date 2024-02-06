@@ -5,6 +5,7 @@ using System.Timers;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -97,6 +98,11 @@ public class GameManager : MonoBehaviour
     private void NextStage()
     {
         stage++;
+        if(stage>=stages.Count)
+        {
+            OnGameEnded.Invoke();
+            return;
+        }
         man.MaxHp= stages[stage - 1].manHp;
         man.Hp = stages[stage - 1].manHp;
     }
@@ -136,6 +142,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        
+        //SceneManager.LoadScene("End");
+        //Destroy(gameObject);
     }
 }
