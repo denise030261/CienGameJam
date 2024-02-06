@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        //SceneManager.LoadScene("End");
-        //Destroy(gameObject);
+        SceneManager.LoadScene("End");
+        Destroy(gameObject);
     }
 }
