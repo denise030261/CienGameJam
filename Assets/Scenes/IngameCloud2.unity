@@ -231,6 +231,7 @@ MonoBehaviour:
   isRow: 0
   projectiles:
   - {fileID: 9098553013090233889, guid: 90f59482912fa274d87b78b7e883258d, type: 3}
+  - {fileID: 9098553013090233889, guid: 5b589f6bc529f9c49932df7adc9fbae6, type: 3}
   - {fileID: 2652571254673934832, guid: 6eb26900737ed49488b08979c621a81d, type: 3}
   spawnSpeed: 1
   spawnMinSpeed: 3
@@ -324,6 +325,54 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].manHp
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[0].health
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[1].health
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[2].health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[3].health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[0].clothes
+      value: 
+      objectReference: {fileID: 21300000, guid: 8620a05f929b6499f9c29121a9849b6d, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[1].clothes
+      value: 
+      objectReference: {fileID: 21300000, guid: 26a9ed282daeb4226ad11e0050875c79, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[2].clothes
+      value: 
+      objectReference: {fileID: 21300000, guid: 46ab2d31183b649e5b9918b2db82fcf7, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[3].clothes
+      value: 
+      objectReference: {fileID: 21300000, guid: b58a5ccd5066b446aa4c7001206aff93, type: 3}
+    - target: {fileID: 4115622663063485390, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
+      propertyPath: stages.Array.data[3].clothesList.Array.data[4].clothes
+      value: 
+      objectReference: {fileID: 21300000, guid: e6119a926e48347119c6795d5e1220b5, type: 3}
     - target: {fileID: 4427466235190262433, guid: d2aef7bc1198c4dc1b26e7d8a0bac5aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9085233
@@ -405,6 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentStage: 0
   Suns: []
+  buttons: []
   needSweat: 0
 --- !u!212 &464126686
 SpriteRenderer:
