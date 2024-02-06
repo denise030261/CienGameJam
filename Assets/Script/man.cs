@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,11 +15,12 @@ public class man : MonoBehaviour
         set
         {
             var tmp = _hp;
-            _hp = value;
+            _hp = math.clamp(value, 0, MaxHp);
             if(tmp!=value)
                 OnManDamaged.Invoke(tmp-value);
         }
     }
+    public int MaxHp;
 
     public ParticleSystem Sweat;
     private bool _wait = false;

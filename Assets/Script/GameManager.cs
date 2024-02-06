@@ -94,6 +94,7 @@ public class GameManager : MonoBehaviour
     private void NextStage()
     {
         stage++;
+        man.MaxHp= stages[stage - 1].manHp;
         man.Hp = stages[stage - 1].manHp;
     }
 /*
