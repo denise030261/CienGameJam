@@ -555,8 +555,6 @@ MonoBehaviour:
   - {fileID: 1938396749}
   - {fileID: 907114020}
   - {fileID: 833941401}
-  - {fileID: 25979051}
-  - {fileID: 1233226648}
   powerButton: {fileID: 25979051}
   dropButton: {fileID: 1233226648}
   needSweat: 40
@@ -2501,6 +2499,7 @@ RectTransform:
   - {fileID: 248887049}
   - {fileID: 1628644644}
   - {fileID: 500366192}
+  - {fileID: 2109515858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2739,8 +2738,8 @@ MonoBehaviour:
   projectiles:
   - {fileID: 9098553013090233889, guid: b3ca6ba131857104387e232bc5fed95d, type: 3}
   spawnSpeed: 30
-  spawnMinSpeed: 10
-  spawnMaxSpeed: 20
+  spawnMinSpeed: 3
+  spawnMaxSpeed: 5
   spawnSpeedDown: 1
   spawnXMax: 0
   spawnXMin: 0
@@ -13360,8 +13359,8 @@ MonoBehaviour:
   - {fileID: 9098553013090233889, guid: 5b589f6bc529f9c49932df7adc9fbae6, type: 3}
   - {fileID: 2652571254673934832, guid: 6eb26900737ed49488b08979c621a81d, type: 3}
   spawnSpeed: 1
-  spawnMinSpeed: 5
-  spawnMaxSpeed: 5
+  spawnMinSpeed: 1
+  spawnMaxSpeed: 3
   spawnSpeedDown: 1
   spawnXMax: 7.5
   spawnXMin: -8
@@ -14496,8 +14495,8 @@ MonoBehaviour:
   projectiles:
   - {fileID: 9098553013090233889, guid: b3ca6ba131857104387e232bc5fed95d, type: 3}
   spawnSpeed: 30
-  spawnMinSpeed: 10
-  spawnMaxSpeed: 20
+  spawnMinSpeed: 2
+  spawnMaxSpeed: 4
   spawnSpeedDown: 1
   spawnXMax: 0
   spawnXMin: 0
@@ -14562,11 +14561,11 @@ Transform:
   m_GameObject: {fileID: 2109515855}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.05, y: -1.06, z: 0}
+  m_LocalPosition: {x: -948.95, y: -541.06, z: 0}
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 960739893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -14579,7 +14578,6 @@ SceneRoots:
   - {fileID: 658863071}
   - {fileID: 1767882265}
   - {fileID: 960739893}
-  - {fileID: 2109515858}
   - {fileID: 1421036778}
   - {fileID: 1685489502}
   - {fileID: 126379645}
