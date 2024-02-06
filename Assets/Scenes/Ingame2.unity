@@ -11358,12 +11358,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.2603631, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 05930a6ba967ce241bfee3edf07e5e3c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 27.324455, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11378,8 +11378,8 @@ Transform:
   m_GameObject: {fileID: 819409888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.6, y: 4.23, z: 0}
-  m_LocalScale: {x: 4.68, y: 1.71, z: 1}
+  m_LocalPosition: {x: -8, y: 3.24, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11520,12 +11520,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.91194963, g: 0.23802455, b: 0.23802455, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a226da31cad19ce45af3b21541e3e9cc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11541,7 +11541,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.62, y: 3.21, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -14047,6 +14047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Backgrounds
       objectReference: {fileID: 0}
+    - target: {fileID: 8757630991490662588, guid: 8d484222f03ff48b68079fc0239ea0bb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df57060e45f19184d9f0fe1a75e8c05b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14337,6 +14341,18 @@ PrefabInstance:
     - target: {fileID: 553546391112197133, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_Name
       value: SunBeam
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.b
+      value: 0.10610718
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.g
+      value: 0.10610718
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123073596595271475, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
+      propertyPath: m_Color.r
+      value: 0.91194963
       objectReference: {fileID: 0}
     - target: {fileID: 8208057322369151259, guid: 877a8d0c9bd79f04da5944d1b9a0b155, type: 3}
       propertyPath: m_LocalPosition.x

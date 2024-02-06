@@ -45,7 +45,7 @@ public class Spawn : MonoBehaviour
             int num = Random.Range(0, 2);
             Instantiate(projectiles[num], spawnTransform, Quaternion.identity);
         }
-        else if (GameManager.Instance.stage >= 4 && !isRow)
+        else if (GameManager.Instance.stage >= 1 && !isRow)
         {
             Debug.Log("1레벨 스폰");
             Instantiate(projectiles[0], spawnTransform, Quaternion.identity);
