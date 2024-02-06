@@ -9,9 +9,11 @@ using UnityEngine.UI;
 public class SunManager : MonoBehaviour
 {
     [SerializeField]
-    int currentStage;
+    int BeamLevel;
     public List<GameObject> Suns;
     public List<Button> buttons;
+    public Button powerButton;
+    public Button dropButton;
     GameManager manager;
     public int needSweat;
     public bool powerUp;
@@ -34,31 +36,31 @@ public class SunManager : MonoBehaviour
     void ChangeBeamOnStage()
     {
         // 각 스테이지에 따라 빔 변경
-        switch (currentStage)
+        switch (BeamLevel)
         {
             case 0:
-                ChangeBeam(currentStage);
+                ChangeBeam(BeamLevel);
                 break;
             case 1:
-                Suns[currentStage-1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             case 2:
-                Suns[currentStage - 1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             case 3:
-                Suns[currentStage - 1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             default: 
                 break;
         }
     }
 
-    void ChangeBeam(int stageLevel)
+    void ChangeBeam(int BeamLevel)
     {
-        Suns[stageLevel].SetActive(true);
+        Suns[BeamLevel].SetActive(true);
     }
 
     public void BeamUpgrade()
@@ -66,29 +68,43 @@ public class SunManager : MonoBehaviour
         int sweat = GameManager.Instance.sweat;
         if (sweat >= needSweat)
         {
-            buttons[currentStage].interactable = false;
+            buttons[BeamLevel].interactable = false;
             GameManager.Instance.sweat = sweat - needSweat;
-            currentStage = currentStage + 1;
+            BeamLevel = BeamLevel + 1;
             
-            if (currentStage < 5)
+            if (BeamLevel < 3)
             {
-                buttons[currentStage].interactable = true;
-            }
-            if(currentStage>=4)
-            {
-                powerUp = true;
-            }
-            if(currentStage >= 5)
-            {
-                // 파티클 시스템의 Emission 모듈에 접근
-                var emissionModule = myParticleSystem.emission;
-
-                // rate over time 값을 변경
-                emissionModule.rateOverTime = newRateOverTime;
+                buttons[BeamLevel].interactable = true;
             }
         }
-
     }
-   
+    public void dropUp()
+    {
+        int sweat = GameManager.Instance.sweat;
+        if (sweat >= needSweat)
+        {
+            dropButton.interactable = false;
+            GameManager.Instance.sweat = sweat - needSweat;
 
+            // 파티클 시스템의 Emission 모듈에 접근
+            var emissionModule = myParticleSystem.emission;
+
+            // rate over time 값을 변경
+            emissionModule.rateOverTime = newRateOverTime;
+            Debug.Log("값 변경 됐나?");
+        }
+    }
+
+    public void beamPowerUp()
+    {
+        int sweat = GameManager.Instance.sweat;
+        if (sweat >= needSweat)
+        {
+            powerButton.interactable = false;
+            GameManager.Instance.sweat = sweat - needSweat;
+
+            powerUp = true;
+            Debug.Log("값 변경 됐나?");
+        }
+    }
 }
