@@ -9,9 +9,11 @@ using UnityEngine.UI;
 public class SunManager : MonoBehaviour
 {
     [SerializeField]
-    int currentStage;
+    int BeamLevel;
     public List<GameObject> Suns;
     public List<Button> buttons;
+    public Button powerButton;
+    public Button dropButton;
     GameManager manager;
     public int needSweat;
     public bool powerUp;
@@ -22,7 +24,7 @@ public class SunManager : MonoBehaviour
     void Start()
     {
         powerUp = false;
-        // °ÔÀÓ ½ÃÀÛ ºö
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         ChangeBeamOnStage();
     }
 
@@ -33,32 +35,32 @@ public class SunManager : MonoBehaviour
 
     void ChangeBeamOnStage()
     {
-        // °¢ ½ºÅ×ÀÌÁö¿¡ µû¶ó ºö º¯°æ
-        switch (currentStage)
+        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        switch (BeamLevel)
         {
             case 0:
-                ChangeBeam(currentStage);
+                ChangeBeam(BeamLevel);
                 break;
             case 1:
-                Suns[currentStage-1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             case 2:
-                Suns[currentStage - 1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             case 3:
-                Suns[currentStage - 1].SetActive(false);
-                ChangeBeam(currentStage);
+                Suns[BeamLevel - 1].SetActive(false);
+                ChangeBeam(BeamLevel);
                 break;
             default: 
                 break;
         }
     }
 
-    void ChangeBeam(int stageLevel)
+    void ChangeBeam(int BeamLevel)
     {
-        Suns[stageLevel].SetActive(true);
+        Suns[BeamLevel].SetActive(true);
     }
 
     public void BeamUpgrade()
@@ -66,28 +68,44 @@ public class SunManager : MonoBehaviour
         int sweat = GameManager.Instance.sweat;
         if (sweat >= needSweat)
         {
-            buttons[currentStage].interactable = false;
+            buttons[BeamLevel].interactable = false;
             GameManager.Instance.sweat = sweat - needSweat;
-            currentStage = currentStage + 1;
+            BeamLevel = BeamLevel + 1;
             
-            if (currentStage < 5)
+            if (BeamLevel < 3)
             {
-                buttons[currentStage].interactable = true;
-            }
-            if(currentStage>=4)
-            {
-                powerUp = true;
-            }
-            if(currentStage >= 5)
-            {
-                // ÆÄÆ¼Å¬ ½Ã½ºÅÛÀÇ Emission ¸ðµâ¿¡ Á¢±Ù
-                var emissionModule = myParticleSystem.emission;
-
-                // rate over time °ªÀ» º¯°æ
-                emissionModule.rateOverTime = newRateOverTime;
+                buttons[BeamLevel].interactable = true;
             }
         }
+    }
+    public void dropUp()
+    {
+        int sweat = GameManager.Instance.sweat;
+        if (sweat >= 100)
+        {
+            dropButton.interactable = false;
+            GameManager.Instance.sweat = sweat - 100;
+            GameManager.Instance.EmissionRate = newRateOverTime;
 
+            // ï¿½ï¿½Æ¼Å¬ ï¿½Ã½ï¿½ï¿½ï¿½ï¿½ï¿½ Emission ï¿½ï¿½â¿¡ ï¿½ï¿½ï¿½ï¿½
+            //var emissionModule = myParticleSystem.emission;
+
+            // rate over time ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            //emissionModule.rateOverTime = newRateOverTime;
+            Debug.Log("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ³ï¿½?");
+        }
     }
 
+    public void beamPowerUp()
+    {
+        int sweat = GameManager.Instance.sweat;
+        if (sweat >= 100)
+        {
+            powerButton.interactable = false;
+            GameManager.Instance.sweat = sweat - 100;
+
+            powerUp = true;
+            Debug.Log("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ³ï¿½?");
+        }
+    }
 }
