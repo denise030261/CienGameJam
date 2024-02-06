@@ -14,9 +14,14 @@ public class SunManager : MonoBehaviour
     public List<Button> buttons;
     GameManager manager;
     public int needSweat;
+    public bool powerUp;
+
+    public ParticleSystem myParticleSystem;
+    public float newRateOverTime = 20f;
 
     void Start()
     {
+        powerUp = false;
         // 게임 시작 빔
         ChangeBeamOnStage();
     }
@@ -65,9 +70,21 @@ public class SunManager : MonoBehaviour
             GameManager.Instance.sweat = sweat - needSweat;
             currentStage = currentStage + 1;
             
-            if (currentStage < 3)
+            if (currentStage < 5)
             {
                 buttons[currentStage].interactable = true;
+            }
+            if(currentStage>=4)
+            {
+                powerUp = true;
+            }
+            if(currentStage >= 5)
+            {
+                // 파티클 시스템의 Emission 모듈에 접근
+                var emissionModule = myParticleSystem.emission;
+
+                // rate over time 값을 변경
+                emissionModule.rateOverTime = newRateOverTime;
             }
         }
 
