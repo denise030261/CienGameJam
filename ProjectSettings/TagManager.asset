@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Beam
+  - Snow
+  - Wind
+  - Tornado
   layers:
   - Default
   - TransparentFX

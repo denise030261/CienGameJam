@@ -20,6 +20,11 @@ public class ChangeSprite : MonoBehaviour
     {
         projectile = GetComponent<Projectile>();
         proSprite=GetComponentInChildren<SpriteRenderer>();
+
+        if(GameManager.Instance.stage >= 3)
+        {
+            FirstState += 1;
+        }
     }
 
     // Update is called once per frame

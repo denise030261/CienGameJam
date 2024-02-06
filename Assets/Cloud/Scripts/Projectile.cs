@@ -28,15 +28,48 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private int temperature = 1; // 나그네에게 온도를 내림
 
+    /// <summary>
+    /// /////////////////////////////////////
+    /// </summary>
+
+    [SerializeField]
+    private int hpUp = 1; // 올라갈 체력
+
+    [SerializeField]
+    private int temperatureDown = 10; // 내려갈 온도
+
+    [SerializeField]
+    private float speedUp = 1; // 올라갈 스피드
+
+
+
     private void Start()
     {
+        if (GameManager.Instance.stage >= 2)
+        {
+            temperature -= temperatureDown;
+        }
+        if(GameManager.Instance.stage>=3)
+        {
+            maxHP += hpUp;
+        }
+        if(GameManager.Instance.stage>=4)
+        {
+            if(speedX==0)
+                speedY += speedUp;
+            else if(speedY==0)
+                speedX += speedUp;
+        }
+
         Init();
 
-        if(transform.position.x<0)
+        if (transform.position.x<0)
         {
             speedX *= -1;
         }
     }
+
+    
 
     void Update()
     {

@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 9190711156878168663}
   m_Layer: 0
   m_Name: Tornado
-  m_TagString: Untagged
+  m_TagString: Tornado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +139,9 @@ MonoBehaviour:
   damageDelay: 0.5
   sunDamage: 1
   temperature: -20
+  hpUp: 1
+  temperatureDown: 10
+  speedUp: 1
 --- !u!61 &-6000161114847660273
 BoxCollider2D:
   m_ObjectHideFlags: 0

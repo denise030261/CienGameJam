@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &9098553013090233889
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5530804225864623762}
   m_Layer: 0
   m_Name: Wind
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +139,9 @@ MonoBehaviour:
   damageDelay: 0.5
   sunDamage: 1
   temperature: -10
+  hpUp: 1
+  temperatureDown: 10
+  speedUp: 1
 --- !u!61 &-6000161114847660273
 BoxCollider2D:
   m_ObjectHideFlags: 0
