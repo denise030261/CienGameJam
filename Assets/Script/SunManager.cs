@@ -81,10 +81,10 @@ public class SunManager : MonoBehaviour
     public void dropUp()
     {
         int sweat = GameManager.Instance.sweat;
-        if (sweat >= needSweat)
+        if (sweat >= 100)
         {
             dropButton.interactable = false;
-            GameManager.Instance.sweat = sweat - needSweat;
+            GameManager.Instance.sweat = sweat - 100;
             GameManager.Instance.EmissionRate = newRateOverTime;
 
             // ��ƼŬ �ý����� Emission ��⿡ ����
@@ -99,10 +99,10 @@ public class SunManager : MonoBehaviour
     public void beamPowerUp()
     {
         int sweat = GameManager.Instance.sweat;
-        if (sweat >= needSweat)
+        if (sweat >= 100)
         {
             powerButton.interactable = false;
-            GameManager.Instance.sweat = sweat - needSweat;
+            GameManager.Instance.sweat = sweat - 100;
 
             powerUp = true;
             Debug.Log("�� ���� �Ƴ�?");

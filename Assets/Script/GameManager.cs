@@ -97,12 +97,14 @@ public class GameManager : MonoBehaviour
 
     private void NextStage()
     {
-        stage++;
+        
         if(stage>=stages.Count)
         {
             OnGameEnded.Invoke();
             return;
         }
+        stage++;
+        Debug.Log(stage);
         man.MaxHp= stages[stage - 1].manHp;
         man.Hp = stages[stage - 1].manHp;
     }

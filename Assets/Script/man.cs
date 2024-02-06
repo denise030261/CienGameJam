@@ -36,7 +36,7 @@ public class man : MonoBehaviour
 
     private void ManDamaged(int hp)
     {
-        Debug.Log(hp);
+       // Debug.Log(hp);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
