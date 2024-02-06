@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGameEnded;
     public int sweat;
     public man man;
-    public Hash128 _currentHash;
+    public int _currentHash;
     public GameObject effect;
 
     [Serializable]
@@ -67,11 +67,11 @@ public class GameManager : MonoBehaviour
         {
             if (clothes.health<=man.Hp)
             {
-                if (_currentHash != clothes.clothes.texture.imageContentsHash)
+                if (_currentHash != clothes.clothes.texture.GetHashCode())
                 {
                     man.GetComponent<SpriteRenderer>().sprite = clothes.clothes;
                     
-                    _currentHash = clothes.clothes.texture.imageContentsHash;
+                    _currentHash = clothes.clothes.texture.GetHashCode();
                     
                     Instantiate(effect, man.transform).transform.position+=Vector3.up*2;
                     if (hp > 0)
